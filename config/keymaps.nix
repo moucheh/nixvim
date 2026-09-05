@@ -113,5 +113,10 @@
       key = "<leader>lg";
       mode = [ "n" ];
     }
+    {
+      action = ":noh<CR>";
+      key = "<Escape>";
+      mode = [ "n" ];
+    }
   ];
 }

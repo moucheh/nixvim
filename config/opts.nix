@@ -1,5 +1,7 @@
 { lib, ... }:
 {
+  globals.mapleader = " ";
+
   opts = {
     foldenable = false;
     number = true;
@@ -57,7 +59,13 @@
     whichwrap = lib.mkAfter "<>[]hl";
     wildmenu = true;
     wildmode = "longest:full,full";
-    wildignore = lib.mkAfter [ "*.o" "*.obj" "*.pyc" "*.class" "*.jar" ];
+    wildignore = lib.mkAfter [
+      "*.o"
+      "*.obj"
+      "*.pyc"
+      "*.class"
+      "*.jar"
+    ];
 
     diffopt = lib.mkAfter "linematch:60";
 
@@ -68,7 +76,7 @@
 
     laststatus = 3;
     splitkeep = "screen";
-    signcolumn = "yes"; 
+    signcolumn = "yes";
 
   };
 }

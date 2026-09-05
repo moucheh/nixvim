@@ -1,13 +1,12 @@
 {
   imports = [
-    ./opts.nix
-    ./keymaps.nix
-    ./plugins.nix
-    ./lsp.nix
     ./autocmds.nix
+    ./cmp.nix
+    ./colorscheme.nix
+    ./conform.nix
+    ./keymaps.nix
+    ./lsp.nix
+    ./opts.nix
+    ./plugins.nix
   ];
-
-  colorschemes.catppuccin.enable = true;
-
-  globals.mapleader = " ";
 }

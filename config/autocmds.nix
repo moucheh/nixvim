@@ -27,11 +27,13 @@
       pattern = [ "*" ];
     }
     {
-      callback = ''
-        function()
-          vim.cmd("tabdo wincmd =")
-        end
-      '';
+      callback = {
+        __raw = ''
+          function()
+            vim.cmd("tabdo wincmd =")
+          end
+        '';
+      };
       event = [ "VimResized" ];
     }
   ];
