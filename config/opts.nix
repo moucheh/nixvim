@@ -1,4 +1,3 @@
-{ lib, ... }:
 {
   globals.mapleader = " ";
 
@@ -53,30 +52,29 @@
 
     splitbelow = true;
     splitright = true;
-    iskeyword = lib.mkAfter "-";
-    path = lib.mkAfter "**";
-    clipboard = lib.mkAfter "unnamedplus";
-    whichwrap = lib.mkAfter "<>[]hl";
     wildmenu = true;
     wildmode = "longest:full,full";
-    wildignore = lib.mkAfter [
-      "*.o"
-      "*.obj"
-      "*.pyc"
-      "*.class"
-      "*.jar"
-    ];
-
-    diffopt = lib.mkAfter "linematch:60";
 
     redrawtime = 10000;
     maxmempattern = 20000;
 
-    undodir = "/home/moucheh/.vim/undodir";
-
     laststatus = 3;
     splitkeep = "screen";
     signcolumn = "yes";
-
   };
+
+  extraConfigLua = ''
+    local opt = vim.opt
+    opt.iskeyword:append "-";
+    opt.path:append "**";
+    opt.clipboard:append "unnamedplus";
+    opt.whichwrap:append "<>[]hl";
+    opt.wildignore:append { '*.o', '*.obj', '*.pyc', '*.class', '*.jar', }
+    opt.diffopt:append "linematch:60";
+
+    local undodir = vim.fn.expand '~/.vim/undodir'
+    if vim.fn.isdirectory(undodir) == 0 then
+      vim.fn.mkdir(undodir, 'p')
+    end
+  '';
 }
