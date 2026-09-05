@@ -20,17 +20,9 @@
         { system, ... }:
         let
           configuration = nixvim.lib.evalNixvim {
-            # Specify the target system.
-            # Alternatively configure `nixpkgs` options in your modules.
             inherit system;
 
-            # Import your Nixvim modules
             modules = [ ./config ];
-
-            # You can use `extraSpecialArgs` to pass additional arguments to your module files
-            extraSpecialArgs = {
-              # inherit (inputs) foo;
-            };
           };
         in
         {
