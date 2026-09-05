@@ -1,3 +1,8 @@
+{ pkgs, ... }:
+let
+  gcc = pkgs.gcc;
+  cc = gcc.cc;
+in
 {
   globals.mapleader = " ";
 
@@ -66,6 +71,9 @@
   extraConfigLua = ''
     local opt = vim.opt
     opt.iskeyword:append "-";
+    vim.opt.path:append("${cc}/include/c++/${gcc.version}")
+    vim.opt.path:append("${cc}/include/c++/${gcc.version}/x86_64-unknown-linux-gnu")
+    vim.opt.path:append("${cc}/lib/gcc/x86_64-unknown-linux-gnu/${gcc.version}/include")
     opt.path:append "**";
     opt.clipboard:append "unnamedplus";
     opt.whichwrap:append "<>[]hl";
