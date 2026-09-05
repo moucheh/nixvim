@@ -8,5 +8,6 @@
     ./lsp.nix
     ./opts.nix
     ./plugins.nix
+    ./telescope.nix
   ];
 }

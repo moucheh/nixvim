@@ -6,10 +6,9 @@
     lazygit.enable = true;
     lualine.enable = true;
     luasnip.enable = true;
+    markdown-preview.enable =true;
     nvim-surround.enable = true;
     oil.enable = true;
-    telescope.enable = true;
-    transparent.enable = true;
     treesitter = {
       enable = true;
       highlight.enable = true;
