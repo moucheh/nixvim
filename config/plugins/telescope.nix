@@ -76,4 +76,21 @@
       };
     };
   };
+  keymaps = [
+    {
+      action = ":Telescope live_grep<CR>";
+      key = "<leader>fg";
+      mode = [ "n" ];
+    }
+    {
+      action = ":Telescope find_files<CR>";
+      key = "<leader>ff";
+      mode = [ "n" ];
+    }
+    {
+      action = ":Telescope buffers<CR>";
+      key = "<leader>fb";
+      mode = [ "n" ];
+    }
+  ];
 }
