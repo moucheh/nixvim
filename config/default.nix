@@ -1,13 +1,13 @@
 {
   imports = [
     ./autocmds.nix
-    ./cmp.nix
     ./colorscheme.nix
-    ./conform.nix
     ./keymaps.nix
     ./lsp.nix
     ./opts.nix
-    ./plugins.nix
-    ./telescope.nix
+    ./plugins/cmp.nix
+    ./plugins/conform.nix
+    ./plugins/init.nix
+    ./plugins/telescope.nix
   ];
 }
