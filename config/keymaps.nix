@@ -21,6 +21,11 @@
       mode = [ "n" ];
     }
     {
+      action = ":bd<CR>";
+      key = "<leader>x";
+      mode = [ "n" ];
+    }
+    {
       action = ":bd!<CR>";
       key = "<leader>X";
       mode = [ "n" ];
@@ -83,6 +88,29 @@
     {
       action = ":lua require('conform').format { lsp_format = 'fallback', async = true, timeout_ms = 500 }<CR>";
       key = "<leader>cf";
+      mode = [
+        "n"
+        "v"
+      ];
+    }
+    {
+      action = ":bnext<CR>";
+      key = "<Tab>";
+      mode = [ "n" ];
+    }
+    {
+      action = ":bprevious<CR>";
+      key = "<S-Tab>";
+      mode = [ "n" ];
+    }
+    {
+      action = ":lua vim.diagnostic.setloclist()<CR>";
+      key = "<leader>ds";
+      mode = [ "n" ];
+    }
+    {
+      action = ":LazyGit<CR>";
+      key = "<leader>lg";
       mode = [ "n" ];
     }
   ];

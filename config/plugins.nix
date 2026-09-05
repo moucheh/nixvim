@@ -1,5 +1,6 @@
 {
   plugins = {
+    blink-pairs.enable = true;
     gitsigns.enable = true;
     lualine.enable = true;
     luasnip.enable = true;
@@ -14,6 +15,7 @@
     };
     web-devicons.enable = true;
     which-key.enable = true;
+    lazygit.enable = true;
 
     conform-nvim = {
       enable = true;
