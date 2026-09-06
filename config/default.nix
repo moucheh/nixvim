@@ -7,6 +7,7 @@
     ./opts.nix
     ./plugins/cmp.nix
     ./plugins/conform.nix
+    ./plugins/hlchunk.nix
     ./plugins/hop.nix
     ./plugins/init.nix
     ./plugins/telescope.nix

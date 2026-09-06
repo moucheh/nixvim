@@ -6,7 +6,7 @@
     lazygit.enable = true;
     lualine.enable = true;
     luasnip.enable = true;
-    markdown-preview.enable =true;
+    markdown-preview.enable = true;
     neogit.enable = true;
     neo-tree.enable = true;
     nvim-surround.enable = true;
