@@ -70,15 +70,16 @@ in
 
   extraConfigLua = ''
     local opt = vim.opt
-    opt.iskeyword:append "-";
-    vim.opt.path:append("${cc}/include/c++/${gcc.version}")
-    vim.opt.path:append("${cc}/include/c++/${gcc.version}/x86_64-unknown-linux-gnu")
-    vim.opt.path:append("${cc}/lib/gcc/x86_64-unknown-linux-gnu/${gcc.version}/include")
-    opt.path:append "**";
-    opt.clipboard:append "unnamedplus";
-    opt.whichwrap:append "<>[]hl";
+    opt.iskeyword:append "-"
+    opt.path:append("${cc}/include/c++/${gcc.version}")
+    opt.path:append("${cc}/include/c++/${gcc.version}/x86_64-unknown-linux-gnu")
+    opt.path:append("${cc}/lib/gcc/x86_64-unknown-linux-gnu/${gcc.version}/include")
+    opt.shortmess:append "sI"
+    opt.path:append "**"
+    opt.clipboard:append "unnamedplus"
+    opt.whichwrap:append "<>[]hl"
     opt.wildignore:append { '*.o', '*.obj', '*.pyc', '*.class', '*.jar', }
-    opt.diffopt:append "linematch:60";
+    opt.diffopt:append "linematch:60"
 
     local undodir = vim.fn.expand '~/.vim/undodir'
     if vim.fn.isdirectory(undodir) == 0 then
