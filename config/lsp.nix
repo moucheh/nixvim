@@ -32,4 +32,29 @@
   };
 
   diagnostic.settings.virtual_text = true;
+
+  keymaps = [
+    {
+      key = "gd";
+      action = {
+        __raw = ''
+          function()
+            vim.lsp.buf.definition()
+          end
+        '';
+      };
+      mode = [ "n" ];
+    }
+    {
+      key = "gD";
+      action = {
+        __raw = ''
+          function()
+            vim.lsp.buf.declaration()
+          end
+        '';
+      };
+      mode = [ "n" ];
+    }
+  ];
 }
