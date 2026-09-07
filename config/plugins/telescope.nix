@@ -1,6 +1,15 @@
 {
   plugins.telescope = {
     enable = true;
+    extensions = {
+      zoxide = {
+        enable = true;
+
+        settings = {
+          prompt_title = "Zoxide Folder List";
+        };
+      };
+    };
     settings = {
       defaults = {
         file_ignore_patterns = [
@@ -90,6 +99,11 @@
     {
       action = ":Telescope buffers<CR>";
       key = "<leader>fb";
+      mode = [ "n" ];
+    }
+    {
+      action = ":Telescope zoxide list<CR>";
+      key = "<leader>fz";
       mode = [ "n" ];
     }
   ];

@@ -1,10 +1,10 @@
 {
   colorschemes = {
-    catppuccin = {
+    everforest = {
       enable = true;
+
       settings = {
-        flavour = "mocha";
-        transparent_background = true;
+        transparent_background = 2;
       };
     };
   };

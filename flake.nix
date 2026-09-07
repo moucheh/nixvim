@@ -27,7 +27,10 @@
           configuration = nixvim.lib.evalNixvim {
             inherit system;
 
-            modules = [ ./config ];
+            modules = [
+              { nixpkgs.config.allowUnfree = true; }
+              ./config
+            ];
           };
         in
         {

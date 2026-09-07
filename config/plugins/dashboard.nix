@@ -19,9 +19,7 @@
         };
         shortcut = [
           {
-            action = {
-              __raw = "function(path) vim.cmd('Telescope find_files') end";
-            };
+            action = "Telescope find_files";
             desc = "Files";
             group = "Label";
             icon = " ";
@@ -33,6 +31,12 @@
             desc = " LazyGit";
             group = "Number";
             key = "l";
+          }
+          {
+            action = "Telescope zoxide list";
+            desc = " Zoxide";
+            group = "Number";
+            key = "z";
           }
         ];
       };
