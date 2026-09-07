@@ -17,19 +17,7 @@
           right_arrow = "⟶";
         };
         style = "#00ffff";
-      };
-      indent = {
-        chars = [
-          "│"
-        ];
-        exclude_filetypes = {
-          lazyterm = true;
-          neo-tree = true;
-        };
-        style = {
-          fg = "#45475a";
-        };
-        use_treesitter = false;
+        use_treesitter = true;
       };
     };
   };
