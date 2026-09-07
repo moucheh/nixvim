@@ -1,10 +1,20 @@
 {
+  imports = [
+    ./cmp.nix
+    ./conform.nix
+    ./dashboard.nix
+    ./hlchunk.nix
+    ./hop.nix
+    ./lensline.nix
+    ./lualine.nix
+    ./telescope.nix
+  ];
+
   plugins = {
     blink-pairs.enable = true;
     bufferline.enable = true;
     gitsigns.enable = true;
     lazygit.enable = true;
-    lualine.enable = true;
     luasnip.enable = true;
     markdown-preview.enable = true;
     neogit.enable = true;
