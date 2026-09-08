@@ -17,6 +17,7 @@
     lazygit.enable = true;
     luasnip.enable = true;
     markdown-preview.enable = true;
+    mini-notify.enable = true;
     neogit.enable = true;
     neo-tree.enable = true;
     nvim-surround.enable = true;

@@ -11,4 +11,7 @@
       };
     };
   };
+  keymaps = [
+    { key = "<leader>lt"; action = ":LenslineToggleView<CR>"; mode = [ "n" ]; }
+  ];
 }
