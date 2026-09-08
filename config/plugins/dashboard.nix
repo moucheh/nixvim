@@ -3,6 +3,9 @@
     enable = true;
     settings = {
       config = {
+        footer = [
+          "moucheh's nixvim"
+        ];
         header = [
           "███╗   ███╗ ██████╗ ██╗   ██╗ ██████╗██╗  ██╗███████╗██╗  ██╗"
           "████╗ ████║██╔═══██╗██║   ██║██╔════╝██║  ██║██╔════╝██║  ██║"
@@ -43,4 +46,12 @@
       theme = "hyper";
     };
   };
+  keymaps = [
+    {
+      key = "<leader>db";
+      action = ":Dashboard<CR>";
+      mode = [ "n" ];
+      options.desc = "Open Dashboard";
+    }
+  ];
 }
