@@ -9,6 +9,9 @@
           prompt_title = "Zoxide Folder List";
         };
       };
+
+      fzf-native.enable = true;
+      undo.enable = true;
     };
     settings = {
       defaults = {
@@ -104,6 +107,11 @@
     {
       action = ":Telescope zoxide list<CR>";
       key = "<leader>fz";
+      mode = [ "n" ];
+    }
+    {
+      action = ":Telescope undo<CR>";
+      key = "<leader>fu";
       mode = [ "n" ];
     }
   ];
