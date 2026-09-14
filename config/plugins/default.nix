@@ -13,6 +13,7 @@
   plugins = {
     blink-pairs.enable = true;
     bufferline.enable = true;
+    friendly-snippets.enable = true;
     gitsigns.enable = true;
     lazygit.enable = true;
     luasnip.enable = true;
